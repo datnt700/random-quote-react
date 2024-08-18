@@ -1,3 +1,4 @@
+import styles from './ButtonImage.module.scss';
 interface Props {
   OnClick(name: string): any;
   src: string;
@@ -5,8 +6,8 @@ interface Props {
 
 function ButtonImage({ OnClick, src }: Props) {
   return (
-    <button className="btn" onClick={() => OnClick('name')}>
-      <img className="image" src={src} alt="" />
+    <button className={styles.btn} onClick={() => OnClick('name')}>
+      <img className={styles.image} src={src} alt="" />
     </button>
   );
 }

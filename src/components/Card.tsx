@@ -1,4 +1,4 @@
-import '../styles/main.scss';
+import styles from './Card.module.scss';
 
 interface Props {
   author: string;
@@ -10,13 +10,13 @@ function Card({ author, content, tags }: Props) {
   console.log('tags');
   return (
     <>
-      <div className="card">
-        <div className="info">
-          <p className="name">{author}</p>
-          <div className="tags">
+      <div className={styles.card}>
+        <div className={styles.info}>
+          <p className={styles.name}>{author}</p>
+          <div className={styles.tags}>
             {tags ? (
               tags.map((tag) => (
-                <span key={tag} className="tag">
+                <span key={tag} className={styles.tag}>
                   {tag}
                 </span>
               ))
@@ -25,8 +25,8 @@ function Card({ author, content, tags }: Props) {
             )}
           </div>
         </div>
-        <div className="quote">
-          <p className="text">{content}</p>
+        <div className={styles.quote}>
+          <p className={styles.text}>{content}</p>
         </div>
       </div>
     </>

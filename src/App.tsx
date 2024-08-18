@@ -1,10 +1,11 @@
 import Card from './components/Card';
-import './styles/app.scss';
+import './app.scss';
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 import ButtonImage from './components/ButtonImage';
 import link from './assets/link.svg';
 import group from './assets/Regroup.svg';
+import toast, { Toaster } from 'react-hot-toast';
 
 function App() {
   interface DataState {
@@ -37,6 +38,7 @@ function App() {
 
   const handleCopy = (text: string) => {
     navigator.clipboard.writeText(text);
+    toast('Copy Successfully.');
   };
 
   return (
@@ -46,6 +48,7 @@ function App() {
         <div className="buttons">
           <ButtonImage OnClick={handleChange} src={group} />
           <ButtonImage OnClick={() => handleCopy(content)} src={link} />
+          <Toaster />
         </div>
       </div>
     </>
