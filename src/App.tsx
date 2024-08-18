@@ -3,6 +3,8 @@ import './styles/app.scss';
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 import ButtonImage from './components/ButtonImage';
+import link from './assets/link.svg';
+import group from './assets/Regroup.svg';
 
 function App() {
   interface DataState {
@@ -42,11 +44,8 @@ function App() {
       <div className="container">
         <Card author={data.author} content={data.content} tags={data.tags} />
         <div className="buttons">
-          <ButtonImage OnClick={handleChange} src="./assets/Regroup.svg" />
-          <ButtonImage
-            OnClick={() => handleCopy(content)}
-            src="./assets/link.svg"
-          />
+          <ButtonImage OnClick={handleChange} src={group} />
+          <ButtonImage OnClick={() => handleCopy(content)} src={link} />
         </div>
       </div>
     </>
