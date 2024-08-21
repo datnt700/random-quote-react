@@ -5,7 +5,7 @@ import { useEffect, useRef, useState } from 'react';
 import ButtonImage from './components/ButtonImage';
 import link from '../assets/link.svg';
 import group from '../assets/Regroup.svg';
-import toast, { Toaster } from 'react-hot-toast';
+import { Toaster } from 'react-hot-toast';
 import Toast from './components/Toast';
 import successIcon from '../assets/SuccessIcon.svg';
 
@@ -21,7 +21,7 @@ function App() {
     tags: [],
   });
   const toastRef = useRef<{ showToast: (msg: string) => void } | null>(null);
-  const [content, setContent] = useState('');
+  const [, setContent] = useState('');
 
   const getData = async () => {
     const quote = await axios.get('https://api.quotable.io/random');
