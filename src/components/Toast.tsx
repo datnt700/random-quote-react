@@ -1,5 +1,5 @@
 import styles from './Toast.module.scss';
-import React, { forwardRef, useImperativeHandle, useState } from 'react';
+import { forwardRef, useImperativeHandle, useState } from 'react';
 
 // Forward the ref and define the component
 const Toast = forwardRef<
