@@ -7,7 +7,6 @@ interface Props {
 }
 
 function Card({ author, content, tags }: Props) {
-  console.log('tags');
   return (
     <>
       <div className={styles.card}>
